@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,12 +10,3 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-//
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-Route::prefix('test')->group(function () {
-    Route::get('/', function (Request $request) {
-        return $request->get('test');
-    });
-});

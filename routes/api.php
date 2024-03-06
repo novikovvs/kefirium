@@ -25,6 +25,6 @@ Route::prefix('auth')->group(function () {
     });
 });
 
-Route::middleware('auth.session')->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('me', [\App\Auth\Controllers\AuthController::class, 'me'])->name('me');
 });
